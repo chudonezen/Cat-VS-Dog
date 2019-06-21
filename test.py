@@ -16,7 +16,7 @@ image = keras.preprocessing.image.img_to_array(image)
 image = image.reshape((1, image.shape[0], image.shape[1], image.shape[2]))
 result = model.predict(image)
 end = time.time()
-print('Using Time : {:.3f}s'.format(end - now)) # 查看预测时间
+print('Using Time : {:.3f}s'.format(end - now)) # print the running time
 label = np.argmax(result[0])
 print('predict animal is :', category[label])
 print('probaility is ', max(result[0]))
